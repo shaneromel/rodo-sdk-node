@@ -20,19 +20,13 @@ RodoClass.prototype.location=function(imei, callback){
 }
 
 RodoClass.prototype.locations=function(callback){
-    this.socket.on(`location/${this.merchantId}`, data=>{
+    this.socket.on(`locations/${this.merchantId}`, data=>{
         callback(data);
     })
 }
 
-// RodoClass.prototype.unlock=function(imei, callback){
-//     this.mqttClient.publish(`rak3sh/feeds/unlock/${imei}`,"unlock",()=>{
-//         callback();
-//     });
-// }
-
 RodoClass.prototype.statuses=function(callback){
-    this.socket.on(`status/${this.merchantId}`, data=>{
+    this.socket.on(`statuses/${this.merchantId}`, data=>{
         callback(data);
     });
 }
