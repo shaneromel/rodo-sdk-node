@@ -1,0 +1,14 @@
+{
+  "name": "rodo-sdk-node",
+  "version": "1.0.0",
+  "description": "Node JS SDK for Rodo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shane Romel",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^2.2.0"
+  }
+}
