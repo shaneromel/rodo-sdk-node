@@ -2,9 +2,9 @@
 Rodo SDK is a client library for the MERCHANTS USING RODO’S LOCK SERVICES TO KEEP A TRACK OF THEIR LOCKS. THIS LIBRARY IS WRITTEN IN NODE JS.
 
 ## Installation
-
+```console
 npm install rodo-sdk-node
-
+```
 ## Example
 
 ```javascript
