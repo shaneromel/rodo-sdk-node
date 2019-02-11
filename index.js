@@ -2,9 +2,20 @@
 
 var io=require("socket.io-client");
 
-function RodoClass(merchantId){
+function RodoClass(merchantId, secretKey){
     this.merchantId=merchantId;
     this.socket=io("http://13.233.145.213:4200");
+
+    this.socket.on("connect", ()=>{
+        console.log("connected");
+
+        this.socket.emit("authentication", {merchant_id:merchantId, secret_key:secretKey});
+        this.socket.on('authenticated', function() {
+            console.log("successfully authenticated")
+        });
+
+    })
+
 }
 
 RodoClass.prototype.nfc=function(callback){
@@ -35,6 +46,12 @@ RodoClass.prototype.status=function(imei, callback){
     this.socket.on(`status/${imei}/${this.merchantId}`, data=>{
         callback(data);
     });
+}
+
+RodoClass.prototype.individualStatus=function(callback){
+    this.socket.on(`individual-status/${this.merchantId}`, data=>{
+        callback(data);
+    })
 }
 
 module.exports=RodoClass;
