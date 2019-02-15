@@ -23,7 +23,7 @@ rodo.location("<imei>", data=>{
 * [rodo.nfc()](#rodonfccallback)
 * [rodo.status()](#rodostatusimei-callback)
 * [rodo.statuses()](#rodostatusescallback)
-* [rodo.individualStatus()]()
+* [rodo.individualStatus()](#rodoindividualstatuscallback)
 
 ### rodo.location(imei, [callback])
 
