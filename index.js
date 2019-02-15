@@ -1,5 +1,3 @@
-// var socket = require('socket.io-client')('http://localhost:4200');
-
 var io=require("socket.io-client");
 
 function RodoClass(merchantId, secretKey){
