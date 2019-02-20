@@ -72,7 +72,7 @@ RodoClass.prototype.removeIndividualStatusListener=function(){
     this.socket.removeListener(`individual-status/${this.merchantId}`);
 }
 
-RodoClass.prototype.nfcListener=function(){
+RodoClass.prototype.removeNfcListener=function(){
     this.socket.removeListener(`nfc/${this.merchantId}`);
 }
 
