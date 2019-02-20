@@ -52,4 +52,28 @@ RodoClass.prototype.individualStatus=function(callback){
     })
 }
 
+RodoClass.prototype.removeLocationListener=function(imei){
+    this.socket.removeListener(`location/${imei}/${this.merchantId}`);
+}
+
+RodoClass.prototype.removeLocationsListener=function(){
+    this.socket.removeListener(`locations/${this.merchantId}`);
+}
+
+RodoClass.prototype.removeStatusListener=function(imei){
+    this.socket.removeListener(`status/${imei}/${this.merchantId}`);
+}
+
+RodoClass.prototype.removeStatusesListener=function(){
+    this.socket.removeListener(`statuses/${this.merchantId}`);
+}
+
+RodoClass.prototype.removeIndividualStatusListener=function(){
+    this.socket.removeListener(`individual-status/${this.merchantId}`);
+}
+
+RodoClass.prototype.nfcListener=function(){
+    this.socket.removeListener(`nfc/${this.merchantId}`);
+}
+
 module.exports=RodoClass;
