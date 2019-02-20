@@ -23,6 +23,7 @@ rodo.location("<imei>", data=>{
 * [rodo.nfc()](#rodonfccallback)
 * [rodo.status()](#rodostatusimei-callback)
 * [rodo.statuses()](#rodostatusescallback)
+* [rodo.individualStatus()](#rodoindividualstatuscallback)
 
 ### rodo.location(imei, [callback])
 
@@ -40,7 +41,7 @@ Fetches the realtime location of all locks under your merchant ID.
 ### rodo.nfc([callback])
 
 * __callback - function(data)__ fires whenever a lock is intended to be unlocked using an NFC card.
-
+`   
 ### rodo.status(imei, [callback])
 
 Listens for changes in a particular lock's status(locked/unlocked);
@@ -50,6 +51,12 @@ Listens for changes in a particular lock's status(locked/unlocked);
 
 ### rodo.statuses([callback])
 
-Listens for changes in all lock statuses(locked/unlocked);
+Listens for changes in all lock statuses and returns status of all locks.(locked/unlocked);
+
+* __callback - function(data)__ fires whenenver a lock gets locked or unlocked.
+
+### rodo.individualStatus([callback])
+
+Listens for changes in all lock statuses and returns the status of the lock which was affected individually.(locked/unlocked);
 
 * __callback - function(data)__ fires whenenver a lock gets locked or unlocked.
