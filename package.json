@@ -1,10 +1,6 @@
 {
   "name": "rodo-sdk-node",
-<<<<<<< HEAD
-  "version": "1.0.1",
-=======
-  "version": "1.0.3",
->>>>>>> cab8252caa39d15dfb2e7a1a8489b411082b8ba1
+  "version": "1.0.5",
   "description": "Node JS SDK for Rodo",
   "main": "index.js",
   "scripts": {
