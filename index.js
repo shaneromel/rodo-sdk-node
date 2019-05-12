@@ -52,6 +52,16 @@ RodoClass.prototype.individualStatus=function(callback){
     })
 }
 
+RodoClass.prototype.batteryStatuses=function(callback){
+    this.socket.on(`battery_status/${this.merchantId}`, data=>{
+        callback(data);
+    })
+}
+
+RodoClass.prototype.removeBatteryStatusesListener=function(){
+    this.socket.removeListener(`battery_status/${this.merchantId}`);
+}
+
 RodoClass.prototype.removeLocationListener=function(imei){
     this.socket.removeListener(`location/${imei}/${this.merchantId}`);
 }
