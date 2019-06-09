@@ -2,7 +2,7 @@ var io=require("socket.io-client");
 
 function RodoClass(merchantId, secretKey){
     this.merchantId=merchantId;
-    this.socket=io("http://13.127.229.242:4200");
+    this.socket=io("http://merchant.rodoindia.com:4200");
 
     this.socket.on("connect", ()=>{
         console.log("connected");
